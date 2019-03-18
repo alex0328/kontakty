@@ -52,22 +52,22 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('tel_number', models.IntegerField(max_length=10)),
                 ('tel_type', models.IntegerField(choices=[(1, 'Domowy'), (2, 'Kom'), (3, 'Praca'), (4, 'Inny')])),
-                ('person', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts_app.Person')),
+                ('person', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts.Person')),
             ],
         ),
         migrations.AddField(
             model_name='groups',
             name='person',
-            field=models.ManyToManyField(to='contacts_app.Person'),
+            field=models.ManyToManyField(to='contacts.Person'),
         ),
         migrations.AddField(
             model_name='email',
             name='person',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts_app.Person'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts.Person'),
         ),
         migrations.AddField(
             model_name='adress',
             name='person',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts_app.Person'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts.Person'),
         ),
     ]
