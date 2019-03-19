@@ -22,6 +22,8 @@ class EditUserView(View):
 
 class DetailsUserView(View):
     def get(self, request, pk):
-        ctx= {}
+        person = models.Person.objects.filter(id=pk)
+        ctx = {'person': person}
+        print(ctx)
         return render(request, 'contacts/details.html', ctx)
 
