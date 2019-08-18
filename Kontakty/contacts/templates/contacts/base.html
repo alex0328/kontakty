@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'kontakty/main.css' %}">
+    <title>Moje kontakty</title>
+</head>
+<body class="japa">
+<header class="header">
+    <div class="header_bar">
+        <div class="logo_space"></div>
+        <p class="header_text">4tea</p>
+        <div class="right">
+            <p class="header_link">4tea</p>
+            <p class="header_link">4tea</p>
+        </div>
+
+    </div>
+</header>
+    {% block content %}
+    {% endblock %}
+<footer>
+    <div class="header_bar">
+        <p class="footer_text">Wszelkie prawa złamane</p>
+    </div>
+</footer>
+</body>
+</html>

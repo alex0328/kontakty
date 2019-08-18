@@ -1,0 +1,66 @@
+.header_bar {
+    height: 70px;
+    background: #000;
+}
+
+.header_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_text {
+    color: #fff;
+    text-align: center;
+}
+
+.header_text,
+.header_link {
+    color: #fff;
+    display: inline;
+}
+
+.header_text {
+    padding-left: 60px;
+}
+
+.header_link {
+    float: right;
+    padding-right: 60px;
+}
+
+.header_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.person {
+    border: 1px solid #000000;
+    margin: 20px auto;
+    width: 500px;
+    padding: 20px;
+}
+
+.person_name,
+.person_link,
+.person_surname,
+.person_remarks {
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #412e00;
+}
+
+.button {
+    background-color: black;
+}
+
+.button a {
+    color: #fff;
+}

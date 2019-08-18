@@ -35,7 +35,7 @@ class Adress(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
 
     def __str__(self):
-        str = 'id: {}, city: {}, street: {}, house_number: {}'.format(self.id,self.city, self.street, self.house_number)
+        str = 'id: {}, city: {}, street: {}, house_number: {}, person: {}'.format(self.id,self.city, self.street, self.house_number, self.person)
         return str
 
 class Telephone(models.Model):

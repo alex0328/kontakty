@@ -1,23 +1,16 @@
-{%  load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'contacts/base.html' %}
+
+{% block content %}
 {% for pers in person %}
-<div>
-<a href="{% url 'contacts:details' pers.id %}">Name:</a>
-<p>{{ pers.name }}</p>
-<h2>surname:</h2>
-<p>{{ pers.surname }}</p>
-<h2>Remarks:</h2>
-<p> {{ pers.remarks }}</p>
-</div><br>
-<a href="{% url 'contacts:delete' pers.id %}">Delete me</a><br>
-<a href="{% url 'contacts:edit' pers.id %}">Edit me me</a>
+<div class="person">
+<h2>Name:</h2>
+    <div class="person_link">
+        <a href="{% url 'contacts:details' pers.id %}" class="person_name">{{ pers.name }}</a>
+    </div>
+    <div class="person_link button">
+        <a href="{% url 'contacts:delete' pers.id %}">Delete me</a><br>
+        <a href="{% url 'contacts:edit' pers.id %}">Edit me me</a>
+    </div>
+</div>
 {%  endfor %}
-afd
-</body>
-</html>
+{% endblock content %}

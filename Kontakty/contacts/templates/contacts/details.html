@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-Details
-</body>
-</html>
+{% extends 'contacts/base.html' %}
+{% block content %}
+
+    <h1>{{ pers.name }}</h1>
+    <img href="{{ pers.photo }}">
+{% for ad in pers.adress_set.all %}
+ {{ ad.city }}
+
+{% endfor %}
+    {%  for gr in pers.groups_set.all %}
+        <h3>{{ gr.group_name }}</h3>
+    {% endfor %}
+
+{% endblock content %}

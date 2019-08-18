@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from contacts import models
 
+
 # Create your views here.
 
 class MainPageView(View):
@@ -17,13 +18,13 @@ class DeleteUserView(View):
 
 class EditUserView(View):
     def get(self, request, pk):
-        ctx= {}
+        ctx = {}
         return render(request, 'contacts/edit.html', ctx)
 
 class DetailsUserView(View):
     def get(self, request, pk):
-        person = models.Person.objects.filter(id=pk)
-        ctx = {'person': person}
+        pers = models.Person.objects.get(id=pk)
+        ctx = {'pers': pers}
         print(ctx)
         return render(request, 'contacts/details.html', ctx)
 
